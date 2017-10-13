@@ -1,31 +1,32 @@
 #include <stdio.h>
 
-double _abs(double x)
-{
-    return x >= 0 ? x : -x;
-}
-
-int _sqrt(int x) // 牛顿下降法
-{
-    double n;
-
-    n = 1.0;
-
-    while (_abs(n*n - x) > 1e-5)
-    {
-        n = (x / n + n) / 2.0;
-    }
-
-    return n;
-}
+#define MAX 500
 
 int main()
 {
-    int x;
+    int n, a[MAX], i, cur;
 
-    while (scanf("%d", &x) != EOF)
+    scanf("%d", &n);
+
+    for (i = 0; i < n; ++i)
     {
-        printf("%d\n", _sqrt(x));
+        scanf("%d", &a[i]);
     }
+
+    cur = 0;
+    while (cur < n - 1)
+    {
+        cur += a[cur];
+    }
+
+    if (cur == n - 1)
+    {
+        printf("true\n");
+    }
+    else
+    {
+        printf("false\n");
+    }
+
     return 0;
 }
