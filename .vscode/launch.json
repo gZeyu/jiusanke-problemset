@@ -5,6 +5,7 @@
         "type": "cppvsdbg",
         "request": "launch",
         "program": "${workspaceRoot}/a.exe",
+        //"args": ["<", "${workspaceRoot}/.vscode/data_in.txt"],
         "args": ["<", "${workspaceRoot}/.vscode/data_in.txt", ">", "${workspaceRoot}/.vscode/data_out.txt"],
         "stopAtEntry": false,
         "cwd": "${workspaceRoot}",

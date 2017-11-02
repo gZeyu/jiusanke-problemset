@@ -82,6 +82,7 @@ int func2(int N, int *num)
 
     return x + (y > z ? y : z);
 }
+
 int main()
 {
     int N, num[MAX], i, j, tmp, cnt;
